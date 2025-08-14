@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:dmarsh19/urban-enigma.git
+    repoURL: https://github.com/dmarsh19/urban-enigma.git
     targetRevision: main
     path: deploy/bootstrap
   destination:
