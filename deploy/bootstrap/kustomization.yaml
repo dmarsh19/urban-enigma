@@ -3,3 +3,4 @@ kind: Kustomization
 
 resources:
   - ../components/argocd/overlays/dev
+  - resources/argocd.application.yaml
