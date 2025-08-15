@@ -15,4 +15,4 @@ jobs:
       - name: valid kustomize bootstrap
         run: kustomize build deploy/bootstrap
       - name: valid kustomize http-echo
-        run: kustomize build apps/http-echo/overlays/dev
+        run: kustomize build deploy/apps/http-echo/overlays/dev
