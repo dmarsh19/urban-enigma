@@ -6,4 +6,4 @@ namespace: argocd
 
 resources:
   - ../../base
-  - resources/argocd.namespace.yaml
+  - resources/argocd.namespaces.yaml
