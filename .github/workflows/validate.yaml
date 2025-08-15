@@ -1,4 +1,4 @@
-name: lint
+name: validate
 
 on:
   push:
@@ -12,3 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate YAML file
         run: yamllint deploy/
+      - name: valid kustomize bootstrap
+        run: kustomize build bootstrap
+      - name: valid kustomize http-echo
+        run: kustomize build apps/http-echo/overlays/dev
