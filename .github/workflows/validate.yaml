@@ -1,18 +1,18 @@
 name: validate
 
 on:
-  push:
-    branches:
-      - main
+  - pull_request
 
 jobs:
-  validate-yaml:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Validate YAML file
+      - name: validate github actions yaml
+        run: yamllint .github/
+      - name: validate deploy yaml
         run: yamllint deploy/
-      - name: valid kustomize bootstrap
+      - name: validate bootstrap kustomize
         run: kustomize build deploy/bootstrap
-      - name: valid kustomize http-echo
+      - name: validate http-echo kustomize
         run: kustomize build deploy/apps/http-echo/overlays/dev
